@@ -1,9 +1,13 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-// vite.config.js
-export default {
-  base: '/JamesRumbleGuitar/', // Set this to the repo name
+export default defineConfig({
   plugins: [react()],
-}
+  base: '/JamesRumbleGuitar/', // Keep this with trailing slash
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+  }
+})
