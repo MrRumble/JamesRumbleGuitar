@@ -2,6 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
+// vite.config.js
+export default {
+  base: '/JamesRumbleGuitar/', // Set this to the repo name
   plugins: [react()],
-})
+}
