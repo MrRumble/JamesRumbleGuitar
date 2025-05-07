@@ -4,33 +4,44 @@ import jam2 from '../assets/jam2.jpg';
 import jam3 from '../assets/jam3.png';
 import jam4 from '../assets/jam4.png';
 import mugshot from '../assets/rumble_mug.png';
-
-// Add more as needed
+import jamesBg from '../assets/rumble_bgd.jpg'; // Make sure to import this background image
 
 export default function About() {
   return (
     <div className="relative min-h-screen bg-customBlue text-white overflow-hidden p-6">
-      <div className="max-w-6xl mx-auto flex flex-col items-center text-center md:text-left">
+      {/* Blue-toned Background Image on Left Half with Fade */}
+      <div className="absolute inset-0 z-0">
+        <div
+          className="relative w-1/2 h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${jamesBg})`,
+            maskImage: 'linear-gradient(to right, black 80%, transparent)',
+            WebkitMaskImage: 'linear-gradient(to right, black 20%, transparent)'
+          }}
+        />
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center text-center md:text-left">
+        {/* Bio Section */}
+        <section className="w-full mb-16">
+          <h2 className="text-5xl font-bold mb-4">About Me</h2>
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+            {/* Text */}
+            <p className="text-lg md:text-xl leading-relaxed md:text-left max-w-3xl">
+              I'm James Rumble – a passionate guitarist and full-time music teacher. From playing lead guitar in function bands to experimenting with funk, rock, and blues styles, my life revolves around sharing the joy of guitar playing. I love jamming live, collaborating with other musicians, and helping students find their voice on the instrument.
+            </p>
 
-{/* Bio Section */}
-<section className="w-full mb-16">
-  <h2 className="text-5xl font-bold mb-4">About Me</h2>
-  <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-    {/* Text */}
-    <p className="text-lg md:text-xl leading-relaxed md:text-left max-w-3xl">
-      I'm James Rumble – a passionate guitarist and full-time music teacher. From playing lead guitar in function bands to experimenting with funk, rock, and blues styles, my life revolves around sharing the joy of guitar playing. I love jamming live, collaborating with other musicians, and helping students find their voice on the instrument.
-    </p>
-
-    {/* Image */}
-    <div className="w-48 h-64 flex-shrink-0">
-      <img
-        src={mugshot}
-        alt="James Rumble"
-        className="w-full h-full object-cover"
-      />
-    </div>
-  </div>
-</section>
+            {/* Image */}
+            <div className="w-48 h-64 flex-shrink-0">
+              <img
+                src={mugshot}
+                alt="James Rumble"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Gallery Reel */}
         <section className="w-full mb-16">
@@ -66,7 +77,6 @@ export default function About() {
             ))}
           </div>
         </section>
-
       </div>
     </div>
   );
