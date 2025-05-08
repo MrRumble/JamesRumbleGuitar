@@ -1,12 +1,43 @@
 import React from 'react';
+import Slider from 'react-slick';
 import jam1 from '../assets/jam1.jpg';
 import jam2 from '../assets/jam2.jpg';
 import jam3 from '../assets/jam3.png';
 import jam4 from '../assets/jam4.png';
+import jam5 from '../assets/live_shot.jpeg';
 import mugshot from '../assets/rumble_mug.png';
-import jamesBg from '../assets/rumble_bgd.jpg'; // Make sure to import this background image
+import jamesBg from '../assets/rumble_bgd.jpg';
 
 export default function About() {
+  // Slider settings for auto play and infinite loop
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000, // Adjust speed of carousel movement
+    draggable: true, // Enable dragging
+    centerMode: true, // Enable center mode for better visualization
+    centerPadding: '20px', // Space between images
+    focusOnSelect: true, // Allows selection of images
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="relative min-h-screen bg-customBlue text-white overflow-hidden p-6">
       {/* Blue-toned Background Image on Left Half with Fade */}
@@ -16,7 +47,7 @@ export default function About() {
           style={{
             backgroundImage: `url(${jamesBg})`,
             maskImage: 'linear-gradient(to right, black 80%, transparent)',
-            WebkitMaskImage: 'linear-gradient(to right, black 20%, transparent)'
+            WebkitMaskImage: 'linear-gradient(to right, black 20%, transparent)',
           }}
         />
       </div>
@@ -56,16 +87,17 @@ export default function About() {
         {/* Gallery Reel */}
         <section className="w-full mb-16">
           <h2 className="text-3xl font-semibold mb-4">Photo Gallery</h2>
-          <div className="flex space-x-6 overflow-x-auto pb-4">
-            {[jam1, jam2, jam3, jam4].map((img, idx) => (
-              <img
-                key={idx}
-                src={img}
-                alt={`jam-${idx}`}
-                className="w-64 h-40 object-cover rounded-lg border-2 border-white flex-shrink-0"
-              />
+          <Slider {...settings}>
+            {[jam1, jam2, jam3, jam4, jam5].map((img, idx) => (
+              <div key={idx} className="px-2">
+                <img
+                  src={img}
+                  alt={`jam-${idx}`}
+                  className="w-full h-80 object-cover rounded-lg border-2 border-white"  // Adjust height for portrait
+                />
+              </div>
             ))}
-          </div>
+          </Slider>
         </section>
 
         {/* YouTube Shorts */}

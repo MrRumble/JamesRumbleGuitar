@@ -42,7 +42,7 @@ export default function Home() {
   </h1>
 
   <h2 className="text-6xl font-bold font-heading mb-4">
-    JAMES RUMBLE GUITAR TUITION!
+    JAMES RUMBLE GUITAR LESSONS!
   </h2>
 
   <p className="text-lg md:text-xl mb-4 font-body">
@@ -51,6 +51,10 @@ export default function Home() {
 
   <p className="text-lg md:text-xl mb-4 font-body">
   Based in Caterham, Surrey – available for home visits and flexible travel.
+  </p>
+
+  <p className="text-lg md:text-xl mb-4 font-body">
+  Available 7 days a week!
   </p>
 
   <Link 

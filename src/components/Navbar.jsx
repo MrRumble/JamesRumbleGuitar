@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/rumble_mug.png'; // Adjust the path if needed
 
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <nav className="bg-navySlate text-white shadow-md relative overflow-visible">
       <div className="max-w-10xl sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          
           {/* Logo and Title */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="relative h-16">
@@ -24,6 +22,13 @@ export default function Navbar() {
             </div>
             <span className="text-xl font-header">James Rumble Guitar Lessons</span>
           </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex flex-grow justify-evenly space-x-6">
+            <Link to="/about" className="hover:text-skyTint transition">About Me</Link>
+            <Link to="/lessons" className="hover:text-skyTint transition">Lessons</Link>
+            <Link to="/contact" className="hover:text-skyTint transition">Contact</Link>
+          </div>
           
           {/* Hamburger Button */}
           <div className="md:hidden">
@@ -56,13 +61,6 @@ export default function Navbar() {
                 )}
               </svg>
             </button>
-          </div>
-          
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
-            <Link to="/about" className="hover:text-skyTint transition">About Me</Link>
-            <Link to="/lessons" className="hover:text-skyTint transition">Lessons</Link>
-            <Link to="/contact" className="hover:text-skyTint transition">Contact</Link>
           </div>
         </div>
         
