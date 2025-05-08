@@ -9,6 +9,10 @@ export default {
         cloudGray: '#BFCBCE',
         skyTint: '#84A7BA',
       },
+      fontFamily: {
+        heading: ['Raleway', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [],

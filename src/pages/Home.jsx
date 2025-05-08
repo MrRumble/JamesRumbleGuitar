@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link component
 import jamesBg from '../assets/rumble_bgd.jpg'; // blue-toned image
 import liveShot from '../assets/live_shot.jpeg'; // added new image
 
@@ -36,22 +37,31 @@ export default function Home() {
 
         {/* Left Section (Text) */}
         <div className="text-center md:text-left md:w-1/2">
-          <h1 className="text-2xl text-white mb-4">
-            Become a guitarist!
-          </h1>
-          
-          <h2 className="text-6xl font-bold mb-4">
-            Welcome to James Rumble Guitar Lessons!
-          </h2>
-          
-          <p className="text-lg md:text-xl mb-4">
-            Welcome to the wonderful world of guitar! Whether you're a beginner or experienced, book a lesson now and start your musical journey with personalised tuition for any level.
-          </p>
-          
-          <button className="mt-6 px-4 py-2 bg-white text-customBlue font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
-            Contact Me
-          </button>
-        </div>
+  <h1 className="text-2xl text-white mb-4">
+    Become a guitarist!
+  </h1>
+
+  <h2 className="text-6xl font-bold font-heading mb-4">
+    JAMES RUMBLE GUITAR TUITION!
+  </h2>
+
+  <p className="text-lg md:text-xl mb-4 font-body">
+    Welcome to the wonderful world of guitar! Whether you're a beginner or experienced, book a lesson now and start your musical journey with personalised tuition for any level.
+  </p>
+
+  <p className="text-lg md:text-xl mb-4 font-body">
+  Based in Caterham, Surrey – available for home visits and flexible travel.
+  </p>
+
+  <Link 
+    to="/contact" 
+    className="inline-block mt-6 px-4 py-2 bg-white text-customBlue font-semibold font-body rounded-lg shadow-md hover:bg-gray-100 transition duration-300"
+  >
+    Contact Me
+  </Link>
+</div>
+
+
 
       </div>
     </div>

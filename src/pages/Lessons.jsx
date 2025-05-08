@@ -21,9 +21,6 @@ export default function Lessons() {
         <div className="w-full md:w-1/2 ml-auto space-y-10">
           <section>
             <h1 className="text-5xl font-bold mb-4">Guitar Lessons</h1>
-            <p className="text-lg md:text-xl leading-relaxed">
-              Whether you're just starting out or looking to level up your playing, I offer expert tuition tailored to you. With years of experience as a performer and educator, I create fun, structured sessions that build confidence and skill in every student.
-            </p>
           </section>
           
           <section>
@@ -49,6 +46,13 @@ export default function Lessons() {
             </ul>
           </section>
           
+          <section>
+            <h2 className="text-3xl font-semibold mb-2">Availability</h2>
+            <p className="text-lg">
+              I am available for lessons every day of the week from 9 AM to 9 PM. Feel free to reach out and book a session that suits you!
+            </p>
+          </section>
+
           <section>
             <h2 className="text-3xl font-semibold mb-2">Get in Touch</h2>
             <p className="text-lg">

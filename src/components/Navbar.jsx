@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/rumble_mug.png'; // Adjust the path if needed
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   
@@ -21,7 +22,7 @@ export default function Navbar() {
               {/* Spacer to maintain layout despite absolute positioning */}
               <div className="md:w-28 invisible">Spacer</div>
             </div>
-            <span className="text-xl font-bold">Rumble Guitar Lessons</span>
+            <span className="text-xl font-header">James Rumble Guitar Lessons</span>
           </Link>
           
           {/* Hamburger Button */}
@@ -59,8 +60,7 @@ export default function Navbar() {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <Link to="/" className="hover:text-skyTint transition">Home</Link>
-            <Link to="/about" className="hover:text-skyTint transition">About</Link>
+            <Link to="/about" className="hover:text-skyTint transition">About Me</Link>
             <Link to="/lessons" className="hover:text-skyTint transition">Lessons</Link>
             <Link to="/contact" className="hover:text-skyTint transition">Contact</Link>
           </div>
@@ -70,7 +70,7 @@ export default function Navbar() {
         {isOpen && (
           <div className="md:hidden mt-2 flex flex-col space-y-2 bg-customBlue rounded-md p-4">
             <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-skyTint transition">Home</Link>
-            <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-skyTint transition">About</Link>
+            <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-skyTint transition">About Me</Link>
             <Link to="/lessons" onClick={() => setIsOpen(false)} className="hover:text-skyTint transition">Lessons</Link>
             <Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-skyTint transition">Contact</Link>
           </div>

@@ -29,7 +29,17 @@ export default function About() {
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
             {/* Text */}
             <p className="text-lg md:text-xl leading-relaxed md:text-left max-w-3xl">
-              I'm James Rumble – a passionate guitarist and full-time music teacher. From playing lead guitar in function bands to experimenting with funk, rock, and blues styles, my life revolves around sharing the joy of guitar playing. I love jamming live, collaborating with other musicians, and helping students find their voice on the instrument.
+              Hi, I'm James Rumble, and I've been playing guitar for over 20 years. My passion for music spans across a variety of styles — from rock and metal in my younger years, to blues, funk, pop, and classical music.
+              <br /><br />
+              Currently, I perform with White Noise, a professional wedding and function band. You can check us out at <a href="https://www.whitenoiseband.uk" className="text-white hover:text-skyTint underline">whitenoiseband.uk</a> and on <a href="https://www.instagram.com/whitenoisecovers" className="text-white hover:text-skyTint underline">Instagram</a>.
+              <br /><br />
+              Alongside performing, I’ve spent over 2 years teaching guitar to students of all ages, from young children in an extracurricular program designed to introduce them to playing in a band, to adults looking to refine their skills. I believe that learning music is a journey for everyone, regardless of age or experience, and I’m passionate about helping students achieve their goals.
+              <br /><br />
+              Whether you're picking up the guitar for the first time at 6 or 60, I’m here to offer personalised lessons that cater to your musical tastes and learning style. My goal is to make learning fun, engaging, and rewarding for every student.
+              <br /><br />
+              ✅ Fully DBS checked  
+              <br />
+              📍 Based in Caterham, Surrey — available for home visits or travel
             </p>
 
             {/* Image */}
@@ -37,7 +47,7 @@ export default function About() {
               <img
                 src={mugshot}
                 alt="James Rumble"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-full"
               />
             </div>
           </div>
@@ -46,7 +56,7 @@ export default function About() {
         {/* Gallery Reel */}
         <section className="w-full mb-16">
           <h2 className="text-3xl font-semibold mb-4">Photo Gallery</h2>
-          <div className="flex space-x-4 overflow-x-auto pb-4">
+          <div className="flex space-x-6 overflow-x-auto pb-4">
             {[jam1, jam2, jam3, jam4].map((img, idx) => (
               <img
                 key={idx}
