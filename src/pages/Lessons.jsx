@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import jamesBg from '../assets/rumble_bgd.jpg'; // blue-toned image
+import image from '../assets/teaching2.jpg'; // replace with your image
 
 export default function Lessons() {
   return (
-    <div className="relative min-h-screen bg-customBlue text-white p-6">
+    <div className="relative min-h-screen bg-customBlue text-white overflow-hidden">
+
       {/* Blue-toned Background Image on Left Half with Fade */}
       <div className="absolute inset-0 z-0">
         <div
@@ -11,18 +14,29 @@ export default function Lessons() {
           style={{
             backgroundImage: `url(${jamesBg})`,
             maskImage: 'linear-gradient(to right, black 70%, transparent)',
-            WebkitMaskImage: 'linear-gradient(to right, black 70%, transparent)'
+            WebkitMaskImage: 'linear-gradient(to right, black 70%, transparent)',
           }}
         />
       </div>
-      
-      {/* Content Container - Aligned to Right */}
-      <div className="relative z-10 flex justify-end">
-        <div className="w-full md:w-1/2 ml-auto space-y-10">
-          <section>
-            <h1 className="text-5xl font-bold mb-4">Guitar Lessons</h1>
-          </section>
-          
+
+      {/* Foreground Content */}
+      <div className="relative z-10 flex flex-col md:flex-row justify-center items-center min-h-screen p-6">
+
+        {/* Right Section (Image) */}
+        <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+          <div className="relative overflow-hidden w-72 h-72 md:w-96 md:h-96 border-4 border-white transform rotate-3">
+            <img
+              src={image}
+              alt="Teaching Shot"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+
+        {/* Left Section (Text) */}
+        <div className="text-center md:text-left md:w-1/2">
+        
+
           <section>
             <h2 className="text-3xl font-semibold mb-2">Lesson Prices</h2>
             <ul className="list-disc list-inside text-lg">
@@ -56,7 +70,7 @@ export default function Lessons() {
           <section>
             <h2 className="text-3xl font-semibold mb-2">Get in Touch</h2>
             <p className="text-lg">
-              Interested in booking a lesson or want to find out more? I'd love to hear from you. Reach out via my <a href="/contact" className="underline font-medium hover:text-yellow-300">Contact</a> page and let's get you started.
+              Interested in booking a lesson or want to find out more? I'd love to hear from you. Reach out via my <Link to="/contact" className="underline font-medium hover:text-yellow-300">Contact</Link> page and let's get you started.
             </p>
           </section>
         </div>

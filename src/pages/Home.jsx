@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link component
 import jamesBg from '../assets/rumble_bgd.jpg'; // blue-toned image
-import liveShot from '../assets/live_shot.jpeg'; // added new image
+import teaching1 from '../assets/teaching1.jpg'; // added new image
 
 export default function Home() {
   return (
@@ -28,8 +28,8 @@ export default function Home() {
             className="relative overflow-hidden w-72 h-72 md:w-96 md:h-96 border-4 border-white transform rotate-3"
           >
             <img
-              src={liveShot}
-              alt="Live Shot"
+              src={teaching1}
+              alt="Teaching Shot"
               className="object-cover w-full h-full"
             />
           </div>

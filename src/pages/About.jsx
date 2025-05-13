@@ -5,6 +5,8 @@ import jam2 from '../assets/jam2.jpg';
 import jam3 from '../assets/jam3.png';
 import jam4 from '../assets/jam4.png';
 import jam5 from '../assets/live_shot.jpeg';
+import jam6 from '../assets/jam5.png';
+import jam7 from '../assets/jam7.png';
 import mugshot from '../assets/rumble_mug.png';
 import jamesBg from '../assets/rumble_bgd.jpg';
 
@@ -88,7 +90,7 @@ export default function About() {
         <section className="w-full mb-16">
           <h2 className="text-3xl font-semibold mb-4">Photo Gallery</h2>
           <Slider {...settings}>
-            {[jam1, jam2, jam3, jam4, jam5].map((img, idx) => (
+            {[jam1, jam2, jam3, jam4, jam5, jam6, jam7].map((img, idx) => (
               <div key={idx} className="px-2">
                 <img
                   src={img}
@@ -105,7 +107,7 @@ export default function About() {
           <h2 className="text-3xl font-semibold mb-4">Watch Me Play</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Replace these with your actual Shorts video IDs */}
-            {["SHORTS_VIDEO_ID_1", "SHORTS_VIDEO_ID_2", "SHORTS_VIDEO_ID_3"].map((id) => (
+            {["z77tQE8svE0", "SHORTS_VIDEO_ID_2", "SHORTS_VIDEO_ID_3"].map((id) => (
               <div key={id} className="w-full aspect-video">
                 <iframe
                   className="w-full h-full rounded-lg"
