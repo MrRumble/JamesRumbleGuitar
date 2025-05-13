@@ -107,7 +107,7 @@ export default function About() {
           <h2 className="text-3xl font-semibold mb-4">Watch Me Play</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Replace these with your actual Shorts video IDs */}
-            {["z77tQE8svE0", "SHORTS_VIDEO_ID_2", "SHORTS_VIDEO_ID_3"].map((id) => (
+            {["z77tQE8svE0", "DJaOorPuEFA", "SHORTS_VIDEO_ID_3"].map((id) => (
               <div key={id} className="w-full aspect-video">
                 <iframe
                   className="w-full h-full rounded-lg"
